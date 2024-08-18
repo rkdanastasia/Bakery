@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 16px;
+  padding: 16px 20px;
 
   @media screen and (min-width: $bp-desktop) {
     padding-top: 32px;
@@ -17,8 +17,8 @@
 
   &__nav {
     display: flex;
-    flex-grow: 1;
     align-items: center;
+    flex-grow: 1;
     gap: 40px;
   }
 

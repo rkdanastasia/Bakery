@@ -7,35 +7,53 @@
   background-size: cover;
   background-position: center;
 
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
-    width: 180px;
-    height: 120px;
-    left: 0;
     bottom: 0;
     background-repeat: no-repeat;
-    background-image: url(../images/decor-bread-small.png);
     content: "";
   }
 
-  &::after {
-    position: absolute;
-    width: 380px;
-    height: 190px;
-    right: 0;
-    bottom: 0;
+  &::before {
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 206px;
     background-repeat: no-repeat;
-    background-image: url(../images/decor-bread-large.png);
-    content: "";
+    background-image: url("../images/mobile-bread-left.png");
+
+    @media screen and (min-width: $bp-tablet) {
+      top: auto;
+      right: auto;
+      width: 180px;
+      height: 120px;
+      background-image: url("../images/decor-bread-small.png");
+    }
+  }
+
+  &::after {
+    background-image: url("../images/mobile-bread-right.png");
+    right: 0;
+    width: 102px;
+    height: 91px;
+
+    @media screen and (min-width: $bp-tablet) {
+      top: auto;
+      left: auto;
+      width: 380px;
+      height: 190px;
+      background-image: url("../images/decor-bread-large.png");
+    }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 
     @media screen and (min-width: $bp-tablet) {
       flex-direction: row;
+      gap: 20px;
     }
   }
 
@@ -44,12 +62,13 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    gap: 32px;
 
     @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
       flex-basis: 50%;
       text-align: left;
-      flex-direction: row;
+      gap: 20px;
     }
   }
 
@@ -74,7 +93,7 @@
     color: var(--color-brand-normal);
   }
 
-  &__address-icon {
+  &__socials-icon {
     fill: var(--color-primary-light);
   }
 

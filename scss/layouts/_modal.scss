@@ -20,11 +20,11 @@
 
 .modal {
   position: relative;
+  padding: 48px;
   width: 100%;
   max-width: 880px;
   height: 100%;
-  max-height: 880px;
-  padding: 48px;
+  max-height: 100%;
   background-color: var(--color-primary-light);
   border-radius: 32px;
 
@@ -36,6 +36,15 @@
     position: absolute;
     top: 40px;
     right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    fill: transparent;
+    stroke: var(--color-primary-dark);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 
   &__form-field {
@@ -43,7 +52,16 @@
   }
 
   &__button {
-    display: block;
     margin: 0 auto 24px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 180px;
+    height: 240px;
+    background-image: url("../../images/bread-circle-words.png");
+    content: "";
   }
 }

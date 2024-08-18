@@ -11,7 +11,6 @@ body {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
-  margin: 0;
 
   @media screen and (min-width: $bp-tablet) {
     font-size: 18px;
@@ -38,6 +37,13 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 address {

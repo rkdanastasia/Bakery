@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 40px;
   }
 
   &__content {
@@ -21,7 +22,7 @@
 
   &__text {
     &--limited {
-      max-width: 330px;
+      max-width: 340px;
     }
   }
   &__image {

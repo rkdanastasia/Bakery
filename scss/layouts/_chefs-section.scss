@@ -38,13 +38,13 @@
 
   &__list {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
-    flex-direction: column;
 
     @media screen and (min-width: $bp-tablet) {
-      gap: 40px 30px;
       flex-direction: row;
+      gap: 40px 30px;
     }
   }
 }
